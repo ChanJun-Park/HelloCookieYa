@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/playlistList"
+            android:icon="@drawable/ic_playlist"
+            android:title="재생목록 리스트">
+            <menu>
+
+            </menu>
+        </item>
+        <item
+            android:id="@+id/addPlaylist"
+            android:icon="@drawable/ic_plus"
+            android:title="재생목록 추가" />
+    </group>
+
+    <group
+        android:id="@+id/generalMenu"
+        android:checkableBehavior="single">
+        <item
+            android:title="설정">
+            <menu>
+                <item
+                    android:id="@+id/nav_init_voice"
+                    android:icon="@drawable/ic_mic"
+                    android:title="사용자 음성인식 초기화"/>
+            </menu>
+        </item>
+    </group>
+
+</menu>

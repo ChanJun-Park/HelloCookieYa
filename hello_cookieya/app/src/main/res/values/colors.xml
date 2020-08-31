@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#6200EE</color>-->
+<!--    <color name="colorPrimary">#f3e4b0</color>-->
+<!--    <color name="colorPrimary">#EEE0B1</color>-->
+    <color name="colorPrimary">#613D30</color>
+<!--    <color name="colorPrimaryDark">#3700B3</color>-->
+<!--    <color name="colorPrimaryDark">#f3e4b0</color>-->
+    <color name="colorPrimaryDark">#000000</color>
+<!--    <color name="colorAccent">#03DAC5</color>-->
+<!--    <color name="colorAccent">#ecd584</color>-->
+<!--    <color name="colorAccent">#e9cd6e</color>-->
+<!--    <color name="colorAccent">#d1a510</color>-->
+<!--    <color name="colorAccent">#FFB900</color>-->
+<!--    <color name="colorAccent">#FF9800</color>-->
+    <color name="colorAccent">#613D30</color>
+    <color name="chocoMilk">#FFF7E9</color>
+    <color name="cheeseCookie">#FDB800</color>
+    <color name="transparent">#1A000000</color>
+    <color name="absoluteTransparent">#00000000</color>
+    <!--
+        투명도
+        100% — FF
+        90% — E6
+        80% — CC
+        70% — B3
+        60% — 99
+        50% — 80
+        40% — 66
+        30% — 4D
+        20% — 33
+        10% — 1A
+        0% — 00
+-->
+</resources>

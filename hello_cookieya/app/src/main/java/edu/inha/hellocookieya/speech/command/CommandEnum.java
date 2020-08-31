@@ -1,0 +1,26 @@
+package edu.inha.hellocookieya.speech.command;
+
+public enum CommandEnum {
+    COMMAND_PLAY,
+    COMMAND_PAUSE,
+    COMMAND_RELATIVE_SEEK,
+    COMMAND_SEEK,
+    COMMAND_CREATE_BOOKMARK,
+    COMMAND_SEEK_TO_BOOKMARK,
+    COMMAND_PLAY_NEXT_VIDEO,
+    COMMAND_PLAY_PREV_VIDEO,
+    COMMAND_PLAY_NTH_VIDEO,
+    COMMAND_AUTO_SCROLL,
+    COMMAND_AUTO_SCROLL_STOP,
+    COMMAND_DELETE_NTH_VIDEO,
+    COMMAND_DELETE_NTH_BOOKMARK,
+    COMMAND_MOVE_TO_LIST,
+    COMMAND_QUIT,
+    COMMAND_LANDSCAPE_MODE,
+    COMMAND_PORTRAIT_MODE,
+    UNDEFINED_COMMAND;
+
+    public static CommandEnum getCommandEnum(int i) {
+        return CommandEnum.values()[i];
+    }
+}
