@@ -24,11 +24,11 @@
 
 ## 데모영상
 
-[유튜브 데모영상](http://www.youtube.com/watch?v=z_fAx0t6cIo)
+<a href="http://www.youtube.com/watch?v=z_fAx0t6cIo" target="_blank">유튜브 데모영상</a>
 
 ## APK 파일
 
-[apk 파일](./app-release.apk)
+<a href="./app-release.apk" target="_blank">apk 파일</a>
 
 ## 상세 기능 소개
 
@@ -195,7 +195,7 @@
 
 위에서 설명한 것처럼 일단 키워드 인식 기능을 중단하고 음성인식 기능을 수행하는 이유는 **안드로이드 기기의 마이크라는 공유자원을 여러 쓰레드에서 동시에 접근하는 과정에서 발생할 수 있는 문제를 회피하기 위해서입니다.** 음성인식 기능이 끝나고 난 뒤에는 `RecordingThread` 객체 내부 쓰레드가 다시 키워드 인식과 관련된 무한루프 코드를 수행하게 합니다.
 
-[`RecordingThread.java` 관련 코드](https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/ai/kitt/snowboy/audio/RecordingThread.java)
+<a href="https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/ai/kitt/snowboy/audio/RecordingThread.java" target="_blank">`RecordingThread.java` 관련 코드</a>
 
 ```java
 ...
@@ -316,7 +316,7 @@ public class RecordingThread {
 }
 ```
 
-[`HelloCookieYaActivity.java` 관련 코드](https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/HelloCookieYaActivity.java)
+<a href="https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/HelloCookieYaActivity.java" taget="_blank">`HelloCookieYaActivity.java` 관련 코드</a>
 
 ```java
 public abstract class HelloCookieYaActivity extends AppCompatActivity {
@@ -407,9 +407,9 @@ public abstract class HelloCookieYaActivity extends AppCompatActivity {
 
 다음으로 구글 STT를 통해서 문자열로 변환한 사용자의 명령을 어떻게 해석하고, 어떻게 관련 동작을 수행하게 했는지 설명하겠습니다. 예를 들어, 사용자가 '1분 10초 뒤로 이동해줘' 와 같은 명령을 했을 때, 발화한 명령이 어떤 것인지를 알 수 있게 하는 주요한 단어들이 있습니다. 시간의 양을 나타내는 **'1분 10초'** 라던지, 뒤쪽을 의미하는 **'뒤'** 라던지, 플레이 시점을 이동하라는 **'이동'** 이라는 단어가 바로 그것입니다. 이렇게 명령어를 해석하는데 중요한 단어들을 정의하고 구분하기 위해서 여러 개의 **TokenInfo 클래스**를 구현하였습니다.
 
-[다양한 TokenInfo 클래스가 정의되어 있는 token 패키지 링크](https://github.com/ChanJun-Park/HelloCookieYa/tree/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/speech/command/token)
+<a href="https://github.com/ChanJun-Park/HelloCookieYa/tree/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/speech/command/token" target="_blank">다양한 TokenInfo 클래스가 정의되어 있는 token 패키지 링크</a>
 
-[**영상 재생과 관련된 PlayTokenInfo 클래스**](https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/speech/command/token/PlayTokenInfo.java)
+<a href="https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/speech/command/token/PlayTokenInfo.java" target="_blank">**영상 재생과 관련된 PlayTokenInfo 클래스**</a>
 
 ```java
 public class PlayTokenInfo extends TokenInfo {
@@ -462,7 +462,7 @@ public class PlayTokenInfo extends TokenInfo {
 
 실제로 사용자가 발화한 문장을 해석하는 클래스는 `CommandParser` 클래스입니다.
 
-[**CommandParser 클래스**](https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/speech/command/CommandParser.java)
+<a href="https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/speech/command/CommandParser.java" target="_blank">**CommandParser 클래스**</a>
 
 ```java
 public class CommandParser {
@@ -548,7 +548,7 @@ public class CommandParser {
 
 **`Command`** 클래스는 다음과 같이 정의되어 있습니다.
 
-[**Command 클래스**](https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/speech/command/Command.java)
+<a href="https://github.com/ChanJun-Park/HelloCookieYa/blob/master/hello_cookieya/app/src/main/java/edu/inha/hellocookieya/speech/command/Command.java" target="_blank">**Command 클래스**</a>
 
 ```java
 public class Command implements Parcelable {
