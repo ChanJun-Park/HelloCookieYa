@@ -6,7 +6,7 @@
 
 평소에 유튜브 요리 영상을 보면서 요리를 하곤 합니다. 어느날 유튜브 요리 영상을 보면서 요리를 하다가, 재료 손질 부분을 놓친적이 있었습니다. 다급하게 유튜브 영상의 플레이 시점을 이동하려 했지만 손에 묻은 물기 때문에 터치가 잘 되지 않았습니다. 이 때 카카오 AI 스피커나 기가 지니 처럼 음성으로 유튜브 영상을 컨트롤 하고 싶다는 생각을 하게 되었습니다. 이 때의 경험을 토대로 **음성인식 유튜브 플레이어** 프로젝트를 진행하게 되었습니다.
 
-<center><img src="image/readme/0.png" width="600px"></center>
+<p align="center"><img src="image/readme/0.png" width="600px"></p align="center">
 
 ## 어플리케이션 개요
 
@@ -16,15 +16,19 @@
 
 만약 이전에 봤던 부분을 다시 봐야할 필요가 있을 때는 **'헬로 쿠키야, 몇 초 전으로 이동해줘'** 와 같은 문장을 발화하여 영상의 플레이 시점을 전으로 이동 시킬 수 있습니다.
 
-<center><img src="image/readme/2.gif" width="600px"></center>
+<p align="center"><img src="image/readme/2.gif" width="600px"></p align="center">
 
 여러번 봐야하는 부분은 북마크 기능을 통해서 북마크를 지정할 수 있습니다. **'헬로 쿠키야, 여기에 북마크 생성'** 과 같은 문장을 발화하여 영상의 특정 플레이 시점에 북마크를 지정할 수 있습니다. 이 후 해당 북마크가 설정된 시점으로 이동하고 싶은 경우 **'헬로 쿠키야, 북마크 몇 번으로 이동'** 과 같은 문장을 발화하여 이동할 수 있습니다.
 
-<center><img src="image/readme/3.gif"></center>
+<p align="center"><img src="image/readme/3.gif"></p align="center">
 
 ## 데모영상
 
 [유튜브 데모영상](http://www.youtube.com/watch?v=z_fAx0t6cIo)
+
+## APK 파일
+
+[apk 파일](./app-release.apk)
 
 ## 상세 기능 소개
 
@@ -32,18 +36,16 @@
 
 먼저 소개할 기능은 키워드 인식 기능입니다. 사용자가 ‘헬로 쿠키야’ 라고 발화하면 앱이 이를 인식하여 음성인식 기능을 시작합니다. 사용자가 키워드 인식 기능을 사용하려면 먼저 사용자 음성인식 초기화 과정을 거쳐야 합니다. 이 과정은 앱이 설치되고 난 후 처음 실행되는시점에서 진행됩니다. 또한 사용자 음성인식 초기화를 다시 진행하고 싶은 경우 앱 메뉴에서 사용자 음성인식 초기화 버튼을 눌러 초기화를 진행할 수도 있습니다.
 
-<center><img src="" width="600px"/></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91786283-3d613980-ec42-11ea-9189-f69c07a28b5f.png" width="600px"/></p align="center">
 
-<center><img src="https://user-images.githubusercontent.com/31771548/91786283-3d613980-ec42-11ea-9189-f69c07a28b5f.png" width="600px"/></center>
-
-<center><img src="https://user-images.githubusercontent.com/31771548/91786287-3e926680-ec42-11ea-954c-a8f801b6cdae.png" width="400px"/></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91786287-3e926680-ec42-11ea-954c-a8f801b6cdae.png" width="400px"/></p align="center">
 
 사용자 음성인식 초기화 과정이 시작된 경우 위에서 표시한 화면들이 나타납니다. 그림 2에서는 사용자 음성인식에 도움이 될 수 있는 정보(성별, 나이대)를 입력합니다. 그림 3에서는 사용자에게 ‘헬로 쿠키야’ 라는 단어를 3번 녹음하게 합니다. 그림 4에서는 사용자가 시작하기 버튼을 눌러서 사용자 음성인식 초기화를 진행합니다. 이때 SNOWBOY api 서버에 사용자 정보와 녹음된 데이터를 전송하고, 개인 키워드 인식에 필요한 파일을 다운로드 받습니다. 그림
 5는 초기화 과정이 모두 끝난 경우 나타납니다.
 
 초기화 과정이 끝난 후에는 앱이 실행되고 있는 시점에서 사용자가 ‘헬로 쿠키야’라고 발화하면 음성인식 기능이 시작되고, 그림 6과 같이 음성인식 명령어 프롬프트 화면이 등장합니다.
 
-<center><img src="https://user-images.githubusercontent.com/31771548/91786672-19522800-ec43-11ea-99b8-0fc557284fed.png" width="400px"/></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91786672-19522800-ec43-11ea-99b8-0fc557284fed.png" width="400px"/></p align="center">
 
 음성인식 프롬프트 화면이 등장한 이 후에 명령어를 발화해서 애플리케이션을 동작시킬 수 있습니다. 사용자가 발화하는 내용은 그림 7 처럼 중간 중간 인식되어 화면에 표시되며 사용자에게 피드백을 제공합니다.
 
@@ -51,16 +53,16 @@
 
 본 앱은 음성을 통해서 영상을 정지하고 재생할 수 있습니다. 예를 들어 사용자가 유튜브 요리 영상을 보면서 요리를 따라하고 있는 상황을 가정해봅시다. 요리 영상의 재료 손질 부분이 너무 빨리 지나가버린 경우, 재료 손질을 모두 끝내기 위해서 음성으로 영상을 정지시켜두고, 재료 손질을 마무리한 다음 영상을 다시 볼 준비가 되었을 때 음성으로 영상을 재생하는 것이 가능해집니다.
 
-<center><img src="https://user-images.githubusercontent.com/31771548/91786809-6635fe80-ec43-11ea-9882-a60dd07fe993.png" width="600px"/></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91786809-6635fe80-ec43-11ea-9882-a60dd07fe993.png" width="600px"/></p align="center">
 
-<center><img src="https://user-images.githubusercontent.com/31771548/91786810-67672b80-ec43-11ea-83b4-f12efedaeba5.png" width="200px"/></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91786810-67672b80-ec43-11ea-83b4-f12efedaeba5.png" width="200px"/></p align="center">
 
 ### 음성으로 영상의 플레이 시점을 조절하는 기능
 
 이 기능은 음성을 통해서 유튜브 영상의 플레이 시점을 조절(Seek) 할 수 있는 기능입니다.
 
-<center><img src="https://user-images.githubusercontent.com/31771548/91786933-bca33d00-ec43-11ea-85b1-32146e4f22f0.png" width="600px"/></center>
-<center><img src="https://user-images.githubusercontent.com/31771548/91786938-be6d0080-ec43-11ea-84cb-37bc54be1c7d.png" width="600px"/></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91786933-bca33d00-ec43-11ea-85b1-32146e4f22f0.png" width="600px"/></p align="center">
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91786938-be6d0080-ec43-11ea-84cb-37bc54be1c7d.png" width="600px"/></p align="center">
 
 사용자가 요리를 하다가 놓친 부분이 있을 때 **‘헬로 쿠키야, 10초 전으로 이동’** 과 같은 문장을 발화하여 영상을 특정 시간 간격만큼 이전으로 이동시키거나, **‘헬로 쿠키야, 1분 앞으로 이동’** 과 같은 문장을 발화하여 이후로 이동시킬 수 있다. 또는 **‘헬로 쿠키야, 2분 10초로 이동’** 과 같은 문장을 발화하여 2분 10초 처럼 해당 시점으로 곧바로 이동시킬 수 있습니다.
 
@@ -68,18 +70,18 @@
 
 이 기능은 유튜브 영상에서 자주 봐야하거나, 나중에 다시 영상을 재생시켜 시청하는 경우에도 다시 찾아서 보고 싶은 부분을 표시해두는 기능입니다. 사용자가 **‘헬로 쿠키야, 여기에 북마크 생성’** 과 같은 명령을 하고, 북마크 이름을 말하면 해당 플레이 시점에 북마크를 생성합니다. 북마크가 설정된 시간대로 이동하고 싶다면 북마크에 설정된 번호를 이용해서 **‘헬로쿠키야, 북마크 1번으로 이동’** 과 같은 문장을 발화하여 플레이 시점을 이동시킬 수 있습니다.
 
-<center><img src="https://user-images.githubusercontent.com/31771548/91787143-20c60100-ec44-11ea-827e-52265fd568a6.png" width="600px"/></center>
-<center><img src="https://user-images.githubusercontent.com/31771548/91787146-21f72e00-ec44-11ea-88f7-f12905133ba5.png" width="400px"/></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91787143-20c60100-ec44-11ea-827e-52265fd568a6.png" width="600px"/></p align="center">
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91787146-21f72e00-ec44-11ea-88f7-f12905133ba5.png" width="400px"/></p align="center">
 
 ### 사용자가 시청할 유튜브 영상을 애플리케이션 내부로 저장하는 기능
 
 사용자가 음성으로 영상을 컨트롤 하려면 일단 유튜브 영상을 애플리케이션 내부로 저장해야 합니다.
 
-<center><img src="https://user-images.githubusercontent.com/31771548/91787322-929e4a80-ec44-11ea-8d1c-e5095985b0fa.png" width="600px"/></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91787322-929e4a80-ec44-11ea-8d1c-e5095985b0fa.png" width="600px"/></p align="center">
 
 앱에 저장되어 있는 유튜브 영상이 없는 경우 그림 23 과 같은 화면이 나타나며 하단의 플러스(+) 버튼을 눌러 유튜브를 실행할 수 있습니다. 사용자는 유튜브에서 음성으로 컨트롤 하고 싶은 영상을 찾은 다음 공유 버튼을 누르고, 그림 25에서 나타난 것처럼 공유 리스트에 등장한 ‘헬로 쿠키야’ 앱 아이콘을 눌러서 유튜브 영상을 앱 내부로 저장합니다.
 
-<center><img src="https://user-images.githubusercontent.com/31771548/91787326-93cf7780-ec44-11ea-887c-ef0d2b81abc7.png" width="400px"/></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/31771548/91787326-93cf7780-ec44-11ea-887c-ef0d2b81abc7.png" width="400px"/></p align="center">
 
 공유하기 버튼을 누른 이 후에는 본 앱이 실행되며, 앱을 내부로 저장할 때 영상의 제목과 설명을 수정할 수 있는 화면이 나타납니다. 이 후 그림 27 에서 처럼 저장될 영상의 모습을 확인하고 저장 버튼을 눌러 영상을 앱 내부로 저장할 수 있습니다.
 
@@ -677,23 +679,23 @@ public class PlayVideoActivity extends HelloCookieYaActivity {
 
 지금까지 설명한 내용을 그림으로 간략하게 설명하면 다음과 같습니다.
 
-<center><img src="image/readme/cp1.png" width="600px"></center>
+<p align="center"><img src="image/readme/cp1.png" width="600px"></p align="center">
 
-<center><img src="image/readme/cp2.png" width="600px"></center>
+<p align="center"><img src="image/readme/cp2.png" width="600px"></p align="center">
 
 Java의 **StringTokenizer** 클래스를 이용해서 명령어 문자열의 단어를 하나씩 추출합니다. 각각의 TokenInfo 클래스의 lexemeList 를 순회하여 lexemeList의 단어가 추출된 단어에 포함되어 있는지 확인합니다. 만약 그렇다면 추출된 단어를 해당 토큰으로 인식합니다. 이제 인식된 토큰에 알맞는 **command 변수의 비트를 세팅**합니다. 각각의 토큰들은 0부터 31사이의 숫자에 대응합니다. 토큰이 인식된 경우 해당 토큰이 가리키는 숫자의 위치에 command 변수의 비트를 1로 세팅합니다.
 
 TimeToken의 경우 해당 토큰이 나타내는 숫자값을 저장해둘 필요가 있습니다. 토큰 내부에 있는 숫자를 읽어들여서 paramValue에 저장해둡니다.
 
-<center><img src="image/readme/cp3.png" width="600px"></center>
+<p align="center"><img src="image/readme/cp3.png" width="600px"></p align="center">
 
 이런식으로 명령어 문자열의 모든 토큰을 확인하여 command 변수와 paramValue를 갱신해줍니다.
 
-<center><img src="image/readme/cp4.png" width="600px"></center>
+<p align="center"><img src="image/readme/cp4.png" width="600px"></p align="center">
 
 명령어 문자열 파싱이 완료되면 command 변수에 어떤 비트가 세팅되어 있는지 확인한 다음, 특정 명령어 대응하는 모든 비트가 세팅된 경우 해당 동작을 수행하게 됩니다.
 
-<center><img src="image/readme/cp5.png" width="600px"></center>
+<p align="center"><img src="image/readme/cp5.png" width="600px"></p align="center">
 
 ### 데이터베이스 테이블
 
