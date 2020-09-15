@@ -28,7 +28,7 @@
 
 ## APK 파일
 
-<a href="./app-release.apk" target="_blank">apk 파일</a>
+<a href="./app-debug.apk" target="_blank">apk 파일</a>
 
 ## 상세 기능 소개
 
@@ -167,6 +167,10 @@
 
 **프로그램 종료 기능**
 - 헬로 쿠키야, 프로그램 종료
+
+## 자바 소스 파일 경로
+
+https://github.com/ChanJun-Park/HelloCookieYa/tree/master/hello_cookieya/app/src/main/java
 
 ## 시스템 개요
 

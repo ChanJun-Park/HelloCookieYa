@@ -5,6 +5,7 @@ import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Process;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -15,6 +16,7 @@ import ai.kitt.snowboy.SnowboyDetect;
 import timber.log.Timber;
 
 import static ai.kitt.snowboy.Constants.ACTIVE_PMDL;
+import static java.lang.Thread.yield;
 
 public class RecordingThread {
     static {
@@ -105,7 +107,6 @@ public class RecordingThread {
     private void record() {
         Timber.v("Start");
         android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_AUDIO);
-
         // Buffer size in bytes: for 0.1 second of audio
         int bufferSize = (int) (Constants.SAMPLE_RATE * 0.1 * 2);
         byte[] audioBuffer = new byte[bufferSize];
@@ -127,6 +128,7 @@ public class RecordingThread {
             while (shouldContinueRecording) {
 
                 if (!isAudioRecordStarted) {
+                    android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_AUDIO);
                     isAudioRecordStarted = true;
                     record.startRecording();
                     Timber.v("Start recording");
@@ -158,7 +160,10 @@ public class RecordingThread {
                 record.stop();
                 isAudioRecordStarted = false;
                 sendMessage(MsgEnum.MSG_RECORD_STOP, null);
+                android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_LOWEST);
             }
+            // busy waiting 으로 인한 cpu 점유 예방
+            Thread.yield();
         } // while(shouldThreadContinueRunning) 끝
 
         record.release();

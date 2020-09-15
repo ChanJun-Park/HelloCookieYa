@@ -133,6 +133,7 @@ public class RecordUserVoiceFragment extends Fragment
             }
         });
 
+        setPlayButtonDisable();
         restorePlayButtonStatus();
         binding.playButton1.setOnClickListener(new View.OnClickListener() {
             @Override
